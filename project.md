@@ -22,3 +22,5 @@ data['zrt'] = (data.rt - data.groupby('id')['rt'].transform('mean')) / data.grou
 # Replace +/- 2 SD with each participant's mean RTs
 data.rt.where(abs(data.zrt) < 2, data.groupby('id')['rt'].transform('mean'), inplace=True, axis = 0)
 ```
+
+[Back](https://arlenejiang.github.io/devportfolio/)
