@@ -12,12 +12,7 @@ plt.axvline(df['rt'].describe()['75%'], 0, 1, color='turquoise', linestyle='--')
 plt.show()
 ```
 
-
-
-
-![png](Assignment_3%20portfolio_files/Assignment_3%20portfolio_0_0.png)
-
-
+<img src="/assignment3-histogram.png" style="max-width:20%" >
 
 
 ```python
@@ -37,7 +32,7 @@ plt.show()
 
 
 
-![png](Assignment_3%20portfolio_files/Assignment_3%20portfolio_1_0.png)
+<img src="/assignment3-cdf.png" style="max-width:20%" >
 
 
 
@@ -62,27 +57,27 @@ df.groupby(['flankers', 'simon']).plot(y='rt', kind='box')
 
 
 
-![png](Assignment_3%20portfolio_files/Assignment_3%20portfolio_2_1.png)
+<img src="/assignment3-boxplot.png" style="max-width:20%" >
 
 
 
 
 
 
-![png](Assignment_3%20portfolio_files/Assignment_3%20portfolio_2_2.png)
+<img src="/assignment3-boxplot2.png" style="max-width:20%" >
 
 
 
 
 
 
-![png](Assignment_3%20portfolio_files/Assignment_3%20portfolio_2_3.png)
+<img src="/assignment3-boxplot3.png" style="max-width:20%" >
 
 
 
 
 
 
-![png](Assignment_3%20portfolio_files/Assignment_3%20portfolio_2_4.png)
+<img src="/assignment3-boxplot4.png" style="max-width:20%" >
 
 [⟵ Back](https://arlenejiang.github.io/arlenejiang/)
