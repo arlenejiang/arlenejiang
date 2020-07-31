@@ -2,14 +2,13 @@
 # Plot histogram
 df.rt.plot(kind = 'hist')
 
-# Don't modify the code below here
 # Add a solid line at the median and dashed lines at the 25th and 75th 
 # percentiles (done for you)
 plt.axvline(df['rt'].describe()['25%'], 0, 1, color='turquoise', linestyle='--')
 plt.axvline(df['rt'].median(), 0, 1, color='cyan', linestyle='-')
 plt.axvline(df['rt'].describe()['75%'], 0, 1, color='turquoise', linestyle='--')
 
-# Rememebr to use plt.show() to see your plots (often they show anyway, but with some garbagy text at the top)
+# Display plot
 plt.show()
 ```
 
@@ -25,13 +24,13 @@ plt.show()
 # Plot the CDF
 df.rt.plot(kind='hist', cumulative=True, density=True)
 
-# Don't modify the code below here
 # Add a solid line at the median and dashed lines at the 25th and 75th 
 # percentiles (done for you)
 plt.axvline(df['rt'].describe()['25%'], 0, 1, color='turquoise', linestyle='--')
 plt.axvline(df['rt'].median(), 0, 1, color='cyan', linestyle='-')
 plt.axvline(df['rt'].describe()['75%'], 0, 1, color='turquoise', linestyle='--')
 
+# Display plot
 plt.show()
 ```
 
