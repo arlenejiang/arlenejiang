@@ -1,7 +1,7 @@
 # Code Sample from NESC 3505: Assignment 2
 ### Manipulating NumPy Arrays
 
-This sample showcases my ability to initalize and perform calculations with NumPy arrays. 
+This sample showcases my ability to initalize and perform calculations on NumPy arrays. 
 
 ```python
 # Import numpy
