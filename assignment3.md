@@ -1,7 +1,7 @@
 # Code Sample from NESC 3505: Assignment 3
 ### Exploratory Data Analysis
 
-
+In this code excerpt, I plot a few different graphs using reaction time data stored in a DataFrame. Visualizing this data allows us to examine the shape of the data and make comparisons between conditions. 
 
 ```python
 # Plot histogram
