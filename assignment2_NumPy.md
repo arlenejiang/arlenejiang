@@ -39,4 +39,4 @@ print("Standard deviation = " + str(round(np.std(full_data[0]), 1)) + " ms")
     Standard deviation = 94.8 ms
 
 
-
+[⟵ Back](https://arlenejiang.github.io/arlenejiang/)
