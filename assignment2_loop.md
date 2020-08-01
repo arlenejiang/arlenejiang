@@ -1,5 +1,5 @@
 # Code Sample from NESC 3505: Assignment 2
-### For Loop Through Files
+### Looping Through Files
 
 This code automates data analysis, reading data files and outputting mean reaction times for each subject. 
 
