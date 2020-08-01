@@ -1,4 +1,6 @@
-# Read in subject data and clean it
+# Code Sample from NESC 3505 Project 1
+
+Data for this project were obtained from an experiment examining reaction times under four different conditions (flanker and Simon effect). The following code reads 21 subjects' data from text files into a DataFrame. Reaction time outliers for each subject are then removed using the groupby function. 
 
 
 ```python
