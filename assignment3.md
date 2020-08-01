@@ -1,3 +1,8 @@
+# Code Sample from NESC 3505: Assignment 3
+### Exploratory Data Analysis
+
+
+
 ```python
 # Plot histogram
 df.rt.plot(kind = 'hist')
