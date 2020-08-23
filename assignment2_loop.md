@@ -4,7 +4,6 @@
 This code automates data analysis, reading data files and outputting mean reaction times for each subject. 
 
 ```python
-
 # List of subject IDs, which correspond to file names
 IDs = ['s10', 's12', 's13', 's14', 's15']
 ```
