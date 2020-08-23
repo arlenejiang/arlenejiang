@@ -13,7 +13,7 @@ from glob import glob
 
 ```python
 # Read subjects' data.txt files into one list and concatenate the list into one DataFrame, data
-data = pd.concat([pd.read_csv(f, sep='\t') for f in sorted(glob('**/*data.txt'))], ignore_index=True)
+data = pd.concat([pd.read_csv(f, sep='\t') for f in sorted(glob('spid**/*_data.txt'))], ignore_index=True)
 ```
 
 
