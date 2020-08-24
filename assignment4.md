@@ -1,20 +1,27 @@
+# Code Sample from NESC 3505: Assignment 4
+### Plotting Heat Maps
 
-Import statements: 
+This code sample uses neural spiking data from six neurons, stored in a DataFrame, df. The data was obtained from an experiment comparing two conditions (see cond_labels in code) and ten different contrast levels (see contr_labels in code). With the use NumPy and Matplotlib, I calculate and visualize histograms of mean neural spiking to different contrasts in heat maps for each condition and neuron. 
+
+Import statements and initialize variables: 
 ```python
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
 ```
 
-
 ```python
-neuron_labels = ['m1_6', 'm1_12', 'm3_4', 'm3_11', 'm6_3a2', 'm6_11']
-cond_labels = ['CTRL', 'ADAPT'] 
-
 # Define peri-stimulus time histogram bins 
 hist_bin_width = 50 
 time_bins = np.arange(0, max(time_labels), hist_bin_width)
+
+# Declare lists needed to loop through for plotting
+neuron_labels = ['m1_6', 'm1_12', 'm3_4', 'm3_11', 'm6_3a2', 'm6_11']
+cond_labels = ['CTRL', 'ADAPT']
+contr_labels = [4, 8, 12, 16, 24, 32, 48, 64, 84, 100]
 ```
+
+Plotting code:
 
 ```python
 # Intialize figure
