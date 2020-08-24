@@ -41,7 +41,7 @@ for neuron in neuron_labels:
         psth_temp = {}
         
         # Add subplot for each condition
-        ax = fig.add_subplot(6, 2, subplot_counter)
+        ax = fig.add_subplot(len(neuron_labels), len(cond_labels], subplot_counter)
 
         # Loop through contrasts
         for contr in contr_labels:
@@ -76,7 +76,7 @@ for neuron in neuron_labels:
         else:
             plt.xticks([])
         
-        #y-axis
+        # Y-axis
         if subplot_counter % 2 == 1:
             plt.yticks([0.5, 2.5, 4.5, 6.5, 8.5], contr_labels[::2])
             plt.ylabel(neuron + '\nContrast level', )
