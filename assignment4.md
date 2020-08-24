@@ -3,8 +3,9 @@
 
 This code sample uses neural spiking data from six neurons, stored in a DataFrame, df. The data was obtained from an experiment comparing two conditions (see cond_labels in code) and ten different contrast levels (see contr_labels in code). With the use NumPy and Matplotlib, I calculate and visualize histograms of mean neural spiking to different contrasts in heat maps for each condition and neuron. 
 
-Import statements and initialize variables: 
+Import statements and variable initialization: 
 ```python
+# Import necessary packages
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
