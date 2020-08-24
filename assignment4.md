@@ -8,54 +8,15 @@ from matplotlib import pyplot as plt
 
 
 ```python
-cond_labels = ['CTRL', 'ADAPT'] 
-contr_labels = [4, 8, 12, 16, 24, 32, 48, 64, 84, 100]
-rep_labels = list(np.arange(1, 8))
-num_reps = len(rep_labels)
-
-time_labels = list(np.arange(4000))
-
-stim_on_time = 2000
-stim_off_time = stim_on_time + 1000
-
-adapt_on_time = 0
-adapt_off_time = adapt_on_time + 2000
-```
-
-
-
-```python
-# Compute the total number of data points per neuron; we need to know how
-#   many rows our DataFrame needs to have.
-len_data = [(x * y * z) for x, y, z in [dat['SaveForAaron_May11_2020'][0][0][1].shape]][0]
-
-# Set up vectors to label the columns in the pandas DataFrame
-num_tp = dat['SaveForAaron_May11_2020'][0,0][1].shape[0]
-time_labels = list(np.arange(num_tp))
-times = time_labels * (len_data//len(time_labels))
-
-num_condcontr = dat['SaveForAaron_May11_2020'][0,0][1].shape[2]
-num_cond = len(cond_labels)
-num_contr = len(contr_labels)
-
-num_reps = dat['SaveForAaron_May11_2020'][0,0][1].shape[1]
-rep_labels = list(np.arange(1, num_reps+1))
-reps = np.tile(np.repeat(rep_labels, num_tp), num_cond * num_contr)
-
-# Since condition and contrast are actually separate variables, we'll
-#  break them out here.
-contrs = np.tile(np.repeat(contr_labels, num_tp * num_reps), num_cond)
-conditions = np.repeat(cond_labels, num_tp * num_reps * num_contr)
-
 neuron_labels = ['m1_6', 'm1_12', 'm3_4', 'm3_11', 'm6_3a2', 'm6_11']
-num_neurons = len(neuron_labels)
-```
+cond_labels = ['CTRL', 'ADAPT'] 
 
-```python
 # Define peri-stimulus time histogram bins 
 hist_bin_width = 50 
 time_bins = np.arange(0, max(time_labels), hist_bin_width)
+```
 
+```python
 # Intialize figure
 fig = plt.figure(figsize=[10, 14])
 
