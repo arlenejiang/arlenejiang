@@ -1,5 +1,6 @@
+
+Import statements: 
 ```python
-import scipy.io as sio
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
@@ -21,16 +22,7 @@ adapt_on_time = 0
 adapt_off_time = adapt_on_time + 2000
 ```
 
-### Plot Experimental Design
 
-Some of the code below may come in handy later!
-
-## Read in Matlab data file
-
-
-```python
-dat = sio.loadmat('crowder_single_unit.mat')
-```
 
 ```python
 # Compute the total number of data points per neuron; we need to know how
@@ -60,12 +52,12 @@ num_neurons = len(neuron_labels)
 ```
 
 ```python
-# Define bins for histograms
+# Define peri-stimulus time histogram bins 
 hist_bin_width = 50 
 time_bins = np.arange(0, max(time_labels), hist_bin_width)
 
 # Intialize figure
-fig = plt.figure(figsize=[16, 8])
+fig = plt.figure(figsize=[10, 14])
 
 # Name figure
 plt.suptitle('Heat maps of mean spiking to stimuli of different contrast levels', fontsize=16)
@@ -100,7 +92,7 @@ for neuron in neuron_labels:
             psth_temp[contr] = nOut/(num_reps*hist_bin_width)
 
         # Plot heat map for one neuron's condition
-        hmap = ax.imshow([psth_temp[i] for i in sorted(psth_temp.keys())], extent = [min(time_labels), max(time_labels)+1, 10, 0], 
+        hmap = ax.imshow([psth_temp[i] for i in sorted(psth_temp.keys(), reverse=True)], extent = [min(time_labels), max(time_labels)+1, 10, 0], 
                          cmap='viridis', interpolation='bilinear', aspect='auto')
 
         # Find heat map with maximum spikes for color bar
@@ -136,12 +128,11 @@ for neuron in neuron_labels:
         subplot_counter += 1
 
 # Set y-axis label
-fig.subplots_adjust(left = 0.07)
-fig.text(0.01, 0.5, 'Neurons', fontsize=14, ha='center', va='center', rotation='vertical')
+fig.subplots_adjust(left = 0.05)
+fig.text(0.02, 0.5, 'Neurons', fontsize=14, ha='center', va='center', rotation='vertical')
 
 # Plot colour bar from heat map with maximum mean spiking per bin
-fig.subplots_adjust(right=0.95)
-cb = fig.colorbar(max_map, cax=fig.add_axes([0.96, 0.072, 0.025, 0.805]))
+cb = fig.colorbar(max_map, cax=fig.add_axes([0.95, 0.036, 0.04, 0.9]))
 cb.ax.set_ylabel('Mean spikes per time bin', fontsize=14)
 
 # Display plot
