@@ -99,7 +99,7 @@ cb.ax.set_ylabel('Mean spikes per time bin', fontsize=14)
 # Display plot
 plt.show()
 ```
-<img src="assignment4_heat.png" style="max-width:100%" >
+<img src="assignment4_heat.png" style="max-width:75%" >
 
 
 [⟵ Back](https://arlenejiang.github.io/arlenejiang/)
