@@ -1,7 +1,7 @@
 # Code Sample from NESC 3505: Project 2
 ### Performing Statistical Tests
 
-I collaborated on this code for a group project, where we analyzed EEG data for event related potentials if subjects read different types of sentences. The following code extracts relevant information from a DataFrame (test_1), calculates mean potentials across electrodes, and conducts a paired t-test between conditions (sentence types). 
+I collaborated on this code for a group project, where we analyzed EEG data for event related potentials if subjects read different types of sentences. The following code extracts relevant information from a DataFrame (test_1), calculates mean potentials across electrodes, and conducts a paired t-test between conditions (sentence types). This process is repeated for each pair of conditions (contrasts) and time windows of interest. 
 
 ```python
 # Format output
@@ -43,3 +43,6 @@ for time in time_windows:
     Time: P600, Contrast: RplusS-Ctrl; t(199)=3.468, p=0.001
     Time: P600, Contrast: RnotS-Ctrl; t(199)=2.600, p=0.009
     Time: P600, Contrast: RplusS-RnotS; t(199)=1.109, p=0.267
+
+
+[⟵ Back](https://arlenejiang.github.io/arlenejiang/)
